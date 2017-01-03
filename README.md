@@ -5,12 +5,10 @@
 [![Chrono-utils on Appveyor][appveyor-image]][appveyor]
 [![Chrono-utils on crates.io][cratesio-image]][cratesio]
 
-[travis-image]: https://travis-ci.org/lifthrasiir/rust-chrono-utils.svg?branch=master
-[travis]: https://travis-ci.org/lifthrasiir/rust-chrono-utils
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/o83jn08389si56fy/branch/master?svg=true
-[appveyor]: https://ci.appveyor.com/project/lifthrasiir/rust-chrono-utils/branch/master
-[cratesio-image]: https://img.shields.io/crates/v/chrono.svg
-[cratesio]: https://crates.io/crates/chrono
+[travis-image]: https://travis-ci.org/svmk/rust-chrono-utils.svg?branch=master
+[travis]: https://travis-ci.org/svmk/rust-chrono-utils
+[cratesio-image]: https://img.shields.io/crates/v/chrono_utils.svg
+[cratesio]: https://crates.io/crates/chrono_utils
 
 Parse utils for [rust-chrono](https://github.com/lifthrasiir/rust-chrono)
 
