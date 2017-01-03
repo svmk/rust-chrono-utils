@@ -1,0 +1,7 @@
+[package]
+name = "chrono_utils"
+version = "0.1.0"
+authors = ["Mikhail Svetov <svmk-work@yandex.ru>"]
+
+[dependencies]
+chrono=">=0.2"

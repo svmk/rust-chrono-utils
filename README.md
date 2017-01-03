@@ -17,3 +17,7 @@ Parse utils for [rust-chrono](https://github.com/lifthrasiir/rust-chrono)
 ## Features
 
 * Parse w3c dates
+
+## Developing
+
+Feel free to make pull requests.
