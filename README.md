@@ -2,7 +2,6 @@
 ====================
 
 [![Chrono-utils on Travis CI][travis-image]][travis]
-[![Chrono-utils on Appveyor][appveyor-image]][appveyor]
 [![Chrono-utils on crates.io][cratesio-image]][cratesio]
 
 [travis-image]: https://travis-ci.org/svmk/rust-chrono-utils.svg?branch=master
