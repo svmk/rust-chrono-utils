@@ -17,7 +17,7 @@ use super::error::*;
 /// Invalid formats: 
 /// `YYYY`,
 /// `YYYY-MM`
-pub fn parse_w3c_datetime(str: &str) ->  ParseResult<DateTime<FixedOffset>> {
+pub fn parse_w3c_datetime(text: &str) ->  ParseResult<DateTime<FixedOffset>> {
     // https://www.w3.org/TR/NOTE-datetime
     // Year:
     //   YYYY (eg 1997)
@@ -41,6 +41,8 @@ pub fn parse_w3c_datetime(str: &str) ->  ParseResult<DateTime<FixedOffset>> {
     // ss   = two digits of second (00 through 59)
     // s    = one or more digits representing a decimal fraction of a second
     // TZD  = time zone designator (Z or +hh:mm or -hh:mm)
+    let chars: Vec<char> = text.chars().collect();
+    let str = &chars;
     let mut position = 0;
     let year = try!(parse_full_year(str,&mut position));
     let _ = try!(parse_token(str,&mut position,"-"));
@@ -139,4 +141,11 @@ fn test_w3c() {
                    date, dt, checkdate);
         }
     };
+}
+
+#[cfg(test)]
+#[test]
+fn test_w3c_invalid() {
+    assert!(parse_w3c_datetime("11 декабря 2011 в 01:43").is_err());
+    assert!(parse_w3c_datetime("2015-03-04T15:34:45.008+05:0011 декабря 2011 в 01:43").is_err());
 }

@@ -1,6 +1,6 @@
 [package]
 name = "chrono_utils"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Mikhail Svetov <svmk-work@yandex.ru>"]
 description = "Utils for chrono library. It's may parse w3c date."
 documentation = "http://svmk.github.io/chrono_utils/0.1.0/chrono_utils/"

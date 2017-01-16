@@ -1,4 +1,4 @@
-[Chrono-utils][doc] 0.0.1
+[Chrono-utils][doc] 0.1.1
 ====================
 
 [![Chrono-utils on Travis CI][travis-image]][travis]
