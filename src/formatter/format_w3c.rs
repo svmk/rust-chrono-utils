@@ -1,11 +1,10 @@
-use chrono::datetime::DateTime;
-use chrono::offset::fixed::FixedOffset;
+use chrono::DateTime;
+use chrono::FixedOffset;
 use chrono::Timelike;
-use chrono::offset::Offset;
 /// Returns an W3C date and time string such as `1996-12-19T16:39:57Z`.
 pub fn format_w3c(datetime: &DateTime<FixedOffset>) -> String {
     let mut format = String::from("%FT%T");
-    let offset = datetime.timezone().local_minus_utc().num_seconds();
+    let offset = datetime.timezone().local_minus_utc();
     if datetime.nanosecond() > 0 {
         format = format + "%.f";
     }

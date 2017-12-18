@@ -1,4 +1,4 @@
-use chrono::offset::fixed::FixedOffset;
+use chrono::FixedOffset;
 use std::iter::Extend;
 use super::error::{ParseErrorKind,ParseError,ParseResult};
 fn get_text(str: &Vec<char>,begin: usize, end: usize) -> String {
