@@ -9,7 +9,7 @@ dependencies = [
 
 [[package]]
 name = "chrono_utils"
-version = "0.1.2"
+version = "0.1.3"
 dependencies = [
  "chrono 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
