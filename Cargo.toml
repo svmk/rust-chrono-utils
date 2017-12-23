@@ -8,4 +8,4 @@ repository = "https://github.com/svmk/rust-chrono-utils"
 license = "MIT"
 
 [dependencies]
-chrono="^0.2"
+chrono="^0.4"

@@ -1,8 +1,8 @@
-use chrono::datetime::DateTime;
-use chrono::offset::fixed::FixedOffset;
-use chrono::naive::date::NaiveDate;
-use chrono::naive::time::NaiveTime;
-use chrono::offset::Offset;
+use chrono::DateTime;
+use chrono::FixedOffset;
+use chrono::NaiveDate;
+use chrono::NaiveTime;
+use chrono::Duration;
 use super::helper::*;
 use super::error::*;
 /// Parses an W3C date and time string then returns a new `DateTime` with a parsed `FixedOffset`.
@@ -72,7 +72,7 @@ pub fn parse_w3c_datetime(text: &str) ->  ParseResult<DateTime<FixedOffset>> {
     if let Some(date) = NaiveDate::from_ymd_opt(year,month,day) {
         if let Some(time) = NaiveTime::from_hms_nano_opt(hour, minute, seconds, nanosecond) {
             let naive_date_time = date.and_time(time);
-            if let Some(naive_date_time) = naive_date_time.checked_sub(offset.local_minus_utc()) {
+            if let Some(naive_date_time) = naive_date_time.checked_sub_signed(Duration::seconds(offset.local_minus_utc() as i64)) {
                 return Ok(DateTime::from_utc(naive_date_time, offset));
             }
         }
